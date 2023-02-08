@@ -1,25 +1,5 @@
-// {
-//   "name": "simple-app",
-//   "context": "..",
-//   "dockerFile": "Dockerfile",
-// //  "remoteUser": "developer",
-//   "mounts": [
-//     "source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
-//   ],
-//   "runArgs": [
-//     "--privileged"
-//   ],
-//   "extensions": [
-//     "dart-code.dart-code",
-//     "dart-code.flutter"
-//   ],
-//   "workspaceMount": "source=${localWorkspaceFolder},target=/home/developer,type=bind,consistency=delegated",
-//   "workspaceFolder": "/home/developer"
-// }
-
-
 {
-  "name": "paperwork",
+  "name": "simple-app",
   "context": "..",
   "dockerFile": "./Dockerfile",
   "remoteUser": "developer",
