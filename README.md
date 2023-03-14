@@ -77,7 +77,7 @@ Once that's done and your app is running on your phone, just tell me so. I have 
 
 ### Step 3: Make a Home page and a Display page
 
-*small presentation on classes and widgets*
+https://docs.flutter.dev/development/ui/widgets-intro
 
 Now that the basics are covered, let's start coding. 
 [Here](https://docs.flutter.dev/cookbook/navigation/navigation-basics) is a link to get you started.
@@ -110,13 +110,9 @@ Here are a few APIs you can use for this step. The documentation is pretty expli
 It can also help you find ideas for other workshops or even talks if there is an API that you find fantastic and cannot wait to talk about!
 
   You may find that we haven't covered much in this workshop (I agree). If so, here is a list of widgets that you might find interesting:
-  - Drawer
-  - Navbar
-  - Something
+  - [Drawer](https://api.flutter.dev/flutter/material/Drawer-class.html)
+  - [Navbar](https://api.flutter.dev/flutter/material/NavigationBar-class.html)
 
-  Also, the flutter links we have used for API calls and navigation between routes are part of the Flutter **[CookBook](https://docs.flutter.dev/cookbook)**.
+  Also, the flutter links we have used for API calls and navigation between routes are part of the Flutter **[CookBook](https://docs.flutter.dev/cookbook)**. So, check that out, it's a really great startpoint to learning flutter.
   
   *Happy Fluttering!*
-  
-  
-
