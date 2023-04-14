@@ -23,7 +23,18 @@ But once that's done, you can start coding in Dart!
 <summary>No</summary>
 
 ##### What a bummer!
-##### *You did not attend my Docker workshop, how unfortunate! You can now download flutter on your computer or download docker: __link_to_docker_install_or_workshop__ to be able to use a container*
+##### *You did not attend my Docker workshop, how unfortunate! You can now download flutter on your computer or download docker  to be able to use a container*
+
+### Installing docker
+
+You can use a script to install Docker (provided by... Docker!)
+
+Just run 
+``` curl -fsSL https://get.docker.com -o get-docker.sh``` to get the script then
+``` sh get-docker.sh ``` to run it.
+
+If it doesn't work, check the permissions of the file and/or try running it in sudo. You can also just try installing it [the usual way](https://docs.docker.com/engine/install/).
+
 ### Installing flutter
 
 https://docs.flutter.dev/get-started/install
@@ -50,12 +61,12 @@ It might be easier to just download Android Studio but it does take up a lot of 
 
 Well, I say empty, but Flutter will create a small app for you that will implement a counter.
 
-Create the project by running ``flutter create name_of_your_app`` Use snakecase for your project name!
-You can also give your actual folder's path like so ``flutter create ..\simple_app`` (if you're using the Dev Container). It should create every file necessary in your actual directory whereas the other command would create another directory with the files inside of your current folder.
+Create the project by running ``flutter create app-name``
+You can also give an existing folder's path like so ``flutter create ..\simple-app`` (if you're using the Dev Container). It should create every file necessary in your actual directory whereas the other command would create another directory with the files inside of your current folder.
 
-If you want to know more about the create command, just type ``flutter create`` it should give you a ton of info you might never use but is still cool to know.
+If you want to know more about the create command, just type ``flutter create`` it should give you a ton of info you might never use but are still cool to know.
 
-(It should be written on your terminal after you've created the project, but it never hurts to repeat.) You can use ``flutter run`` to see what this counter app is all about.
+(It should be written on your terminal after you've created the project, but repeating never hurts.) You can use ``flutter run`` to see what this counter app is all about.
 
 #### USB debugging & Developer mode
 
@@ -86,7 +97,7 @@ You can start coding everything in your main file in the lib folder OR you can c
 
 *Also, if you create new files, __please__ use snake_case convention for the file names.*
 
-Once again, if you run into serious trouble on this step, I am available to answer any questions. But you shouldn't have too much trouble, *I believe in you!*
+Once again, if you run into serious trouble on this step, we are available to answer any questions. But you shouldn't have too much trouble, *I believe in you!*
 
 ---------------------------------------
 
