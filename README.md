@@ -1,90 +1,85 @@
 # Flutter Workshop Part 1
-###### *by Annaïg Leizour*
+#### *by [Annaïg LEIZOUR](https://github.com/Gir-A) and [Bruno DE OLIVEIRA](https://github.com/n0no123)*
 
--------------------------------------
-### Step 1: Do you have Docker installed?
-<details>
-<summary>Yes</summary>
+---
 
-##### Great!
+## Disclaimer
+This workshop was made for VSCode user in mind. We'll provide you with a devcontainer configurations files, meaning that you won't need to go through the process of installing Flutter and the other dependencies. Should you wish to not use VSCode, please we are available to help you through the installation process.
 
-You will be able to use a Dev Container for this workshop!
+## Step 0: Setting up your workspace
 
-Open VSCode and install an extension called **Dev Containers**. Enable it if that's not done.
+### Docker:
+To use the provided devcontainer, you will need to have docker installed.
 
-Clone the repo and open the folder with VSCode. It should show you a popup on your lower-right-side asking to open the folder in a container.
-Click on it. You can now wait for a good 5-10 minutes (depending on the Wifi) while it builds your container and downloads flutter in it for you.
+You can use a script to install Docker (provided by... Docker!) using the following command:
 
-But once that's done, you can start coding in Dart!
+```shell
+  curl -fsSL https://get.docker.com -o get-docker.sh
+```
+You can then run it using (you may need to set the correct permission beforehand):
+```shell
+  sudo sh get-docker.sh
+```
 
-</details>
+If it doesn't work, or if you don't wish to use the script you can always install by following the instruction on [Docker website](https://docs.docker.com/engine/install/).
 
-<details>
-<summary>No</summary>
+### VSCode:
 
-##### What a bummer!
-##### *You did not attend my Docker workshop, how unfortunate! You can now download flutter on your computer or download docker  to be able to use a container*
+You can install VSCode by following the instruction [here](https://code.visualstudio.com/download).
 
-### Installing docker
+Clone the [repository](git@github.com:Gir-A/flutter-workshop-part1.git) and install the [VSCode Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
-You can use a script to install Docker (provided by... Docker!)
+It should prompt you with a popup on the lower-right-side of your screen asking to open the folder in a container. If not, open the Command Pallette with <kbd>ctrl</kbd> + <kbd>⇧ shift</kbd> + <kbd>P</kbd>, and type **>Dev Containers: Open Folder in Container...**. You can now wait for a good 5-10 minutes (depending on the Wifi) while it builds your container and install all the necessary dependencies inside your container.
 
-Just run 
-``` curl -fsSL https://get.docker.com -o get-docker.sh``` to get the script then
-``` sh get-docker.sh ``` to run it.
+---
 
-If it doesn't work, check the permissions of the file and/or try running it in sudo. You can also just try installing it [the usual way](https://docs.docker.com/engine/install/).
-
-### Installing flutter
-
-https://docs.flutter.dev/get-started/install
-
-Choose your distribution and follow the steps!
-
-I am available if there are any problems
-
-*Nota Bene 1:*
-
-You do not need Android Studio to use Flutter. If ``flutter doctor``returns a message saying Android SDK is missing you can download it using ``apt install android-sdk`` if you are on ubuntu.
-Same goes for cmdline-tools. Just run ``sdkmanager --install "cmdline-tools;latest"`` You might have to write the whole path for sdkmanager. You can also download the cmdline-tools from https://goo.gl/XxQghQ. This should bring you to android studio's site just scroll down and select the zip file according to your distribution.
-
-*Nota Bene 2:*
-
-It might be easier to just download Android Studio but it does take up a lot of space on your computer (especially if you use emulators).
-
-</details>
-
-
----------------------------------------
-
-### Step 2: Create an empty project
+### Step 1: Create an empty project
 
 Well, I say empty, but Flutter will create a small app for you that will implement a counter.
 
-Create the project by running ``flutter create app-name``
-You can also give an existing folder's path like so ``flutter create ..\simple-app`` (if you're using the Dev Container). It should create every file necessary in your actual directory whereas the other command would create another directory with the files inside of your current folder.
+Create the project by running
 
-If you want to know more about the create command, just type ``flutter create`` it should give you a ton of info you might never use but are still cool to know.
+```shell
+  flutter create app_name
+```
 
-(It should be written on your terminal after you've created the project, but repeating never hurts.) You can use ``flutter run`` to see what this counter app is all about.
+If you want to know more about the create command, just type:
+```bash
+  flutter help create
+```
+It should give you a ton of info you might never use but are still cool to know.
+
+(It should be written on your terminal after you've created the project, but repeating never hurts.) You can use:
+```bash
+  flutter run
+```
+to see what this counter app is all about.
 
 #### USB debugging & Developer mode
 
 If you have never used your phone to develop an app, you should have an error when trying to run your app.
 
-You will need to enable **Developer mode** on your phone (just do a quick search on how to do it with your phone model). That should unblock a whole lot of new settings. Inside those settings you need to enable **USB Debugging** so that your computer may access your phone.
+You will need to enable **Developer mode** (more information about that [here](https://www.xda-developers.com/android-developer-options/)) on your phone (just do a quick search on how to do it with your phone model). That should unlock a whole lot of new settings. Inside those settings you need to enable **USB Debugging** so that your computer may access your phone.
 
 You will also need to **grant permission** when prompted on your phone and your phone should be in **file transfer mode** when connected to your computer.
 
-You can run ``flutter devices`` in order to check that your phone is available to your app.
+You can run:
+```shell
+  flutter devices
+```
+in order to check that your phone is available to your app.
 
-You can also run ``flutter doctor`` to check on your app's vitals. Kidding, but it still gives you basic info on your app and includes your available devices in its output.
+You can also run:
+```shell
+  flutter doctor
+```
+to check on your app's vitals. Kidding, but it still gives you basic info on your app and includes your available devices in its output.
 
 You should now be able to run the app.
 
 Once that's done and your app is running on your phone, just tell me so. I have a little presentation of the project structure for you guys.
 
----------------------------------------
+---
 
 ### Step 3: Make a Home page and a Display page
 
@@ -95,11 +90,11 @@ Now that the basics are covered, let's start coding.
 
 You can start coding everything in your main file in the lib folder OR you can create 2 files and code each page in each file. (**Second way is cleaner**) *If you need anything in a file from another, you can of course just import it.*
 
-*Also, if you create new files, __please__ use snake_case convention for the file names.*
+*Also, if you create new files, __please__ use snake_case convention for the file names. More information about that [here](https://dart.dev/guides/language/effective-dart/style).*
 
 Once again, if you run into serious trouble on this step, we are available to answer any questions. But you shouldn't have too much trouble, *I believe in you!*
 
----------------------------------------
+---
 
 ### Step 4: Make a few API calls
 
